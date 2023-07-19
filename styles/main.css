@@ -71,6 +71,18 @@ body {
   -webkit-appearance: none;
   margin: 0;
 }
+.field .fontRed {
+  color: var(--lightRed);
+}
+.field .borderRed {
+  border: 1px solid var(--lightRed);
+}
+.field > p {
+  margin: 0;
+  color: var(--lightRed);
+  font-weight: 400;
+  font-style: italic;
+}
 
 #submissionDiv {
   padding: 30px 0;

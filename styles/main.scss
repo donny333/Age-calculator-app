@@ -69,6 +69,18 @@ body {
         -webkit-appearance: none;
         margin: 0;
     }
+    .fontRed{
+        color: var(--lightRed);
+    }
+    .borderRed{
+        border: 1px solid var(--lightRed);
+    }
+    > p{
+        margin: 0;
+        color: var(--lightRed);
+        font-weight: 400;
+        font-style: italic;
+    }
 }
 
 #submissionDiv {
