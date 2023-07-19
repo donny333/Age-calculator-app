@@ -1,0 +1,119 @@
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --lightRed: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --offWhite: hsl(0, 0%, 94%);
+  --lightGrey: hsl(0, 0%, 86%);
+  --smokeyGrey: hsl(0, 1%, 44%);
+  --offBlack: hsl(0, 0%, 8%);
+}
+
+/* 
+Font size (inputs): 32px;
+Font weights: 400i, 700, 800i
+*/
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--offWhite);
+  padding: 0 16px;
+}
+
+#ageCalculator {
+  width: 100%;
+  background-color: var(--white);
+  padding: 32px 16px;
+  border-radius: 32px;
+  border-bottom-right-radius: 96px;
+}
+
+.fields {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.field > label {
+  font-size: 12px;
+  color: var(--smokeyGrey);
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.field > input {
+  width: calc(100% - 10px);
+  padding: 10px 0px 10px 4px;
+  border: 1px solid var(--lightGrey);
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.field > input::-moz-placeholder {
+  font-weight: 700;
+}
+.field > input::placeholder {
+  font-weight: 700;
+}
+.field > input:focus {
+  outline: 1px solid var(--purple);
+}
+.field > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#submissionDiv {
+  padding: 30px 0;
+  margin: 32px 0;
+  position: relative;
+}
+#submissionDiv > button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--purple);
+  border: none;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  transition: 200ms;
+}
+#submissionDiv > button > svg {
+  height: 25px;
+  font-weight: 700;
+}
+#submissionDiv > button:hover {
+  cursor: pointer;
+  background-color: var(--offBlack);
+}
+#submissionDiv hr {
+  border: 1px solid var(--lightGrey);
+  margin: 0;
+}
+
+.result {
+  display: flex;
+  gap: 8px;
+}
+.result > h1 {
+  font-size: 48px;
+  margin: 0;
+  line-height: 60px;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--offBlack);
+}
+.result > h1:first-child {
+  color: var(--purple);
+}/*# sourceMappingURL=main.css.map */
