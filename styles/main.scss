@@ -116,3 +116,44 @@ body {
         color: var(--purple);
     }
 }
+
+@media screen and (min-width:768px) {
+    #ageCalculator {
+        max-width: 800px;
+        padding: 64px 32px;
+        border-radius: 64px;
+        border-bottom-right-radius: 192px;
+    }
+    .field {
+        gap: 12px;
+        > label {
+            font-size: 16px;
+            letter-spacing: 3px;
+        }
+        > input {
+            font-size: 32px;
+            padding: 16px 0px 16px 8px;
+        }
+    }
+    #submissionDiv {
+        padding: 48px 0;
+        margin: 64px 0;
+        > button {
+            left: 100%;
+            transform: translate(-100%, -50%);
+            height: 96px;
+            width: 96px;
+            border-radius: 100%;
+            > svg {
+                height: 48px;
+            }
+        }
+    }
+    .result {
+        gap: 16px;
+        > h1 {
+            font-size: 72px;
+            line-height: 96px;
+        }
+    }
+}
