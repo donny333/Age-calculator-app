@@ -5,6 +5,7 @@ import requiredFieldValidation from "./validations/requiredFieldValidation.js";
 import futureYearValidation from "./validations/futureYearValidation.js";
 import validDateValidation from "./validations/validDateValidation.js";
 import monthValidation from "./validations/monthValidation.js";
+import resultRenderer from "./helpers/resultRenderer.js";
 
 
 function ageCalculatorHandler(event){
@@ -21,25 +22,17 @@ function ageCalculatorHandler(event){
         month: dateNow.getMonth() + 1,
         day: dateNow.getDate()
     }
-    
-    if(
-        requiredFieldValidation(inputDate) && 
-        monthValidation(inputDate) &&
-        validDateValidation(inputDate) &&
-        futureYearValidation(inputDate, currentDate)
-        ) {    
+    if(requiredFieldValidation(inputDate) && 
+    monthValidation(inputDate) &&
+    validDateValidation(inputDate) &&
+    futureYearValidation(inputDate, currentDate)
+    ){    
         const yearsLived = YearsLivedCalculator(inputDate, currentDate);
         const monthsLived = MonthsLivedCalculator(inputDate, currentDate);
-        const daysLived = DaysLivedCalculator(inputDate, currentDate)        
-        console.log(`Years lived: ${yearsLived}`)
-        console.log(`Months lived: ${monthsLived}`)
-        console.log(`Days lived: ${daysLived}`)
+        const daysLived = DaysLivedCalculator(inputDate, currentDate);
+        resultRenderer(yearsLived, monthsLived, daysLived);
     }
-
-
-
-}
-
+};
 document
     .querySelector('#ageCalculatorForm')
-    .addEventListener('submit', ageCalculatorHandler)
+    .addEventListener('submit', ageCalculatorHandler);
