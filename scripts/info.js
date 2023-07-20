@@ -6,6 +6,6 @@ for (let year = 4; year <= 4000; year++) {
   if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
     leapYears.push(year);
   }
-}
+};
 
-export {daysInMonth, daysInMonthLeapYear, leapYears}
+export {daysInMonth, daysInMonthLeapYear, leapYears};
