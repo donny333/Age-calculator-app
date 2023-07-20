@@ -1,5 +1,5 @@
-import errorRemover from "./helpers/errorRemover.js";
-import ValidationErrorText from "./helpers/validationErrorText.js";
+import errorRemover from "../helpers/errorRemover.js";
+import ValidationErrorText from "../helpers/validationErrorText.js";
 
 function requiredFieldValidation(inputDate){
     if(!inputDate.year || !inputDate.month || !inputDate.day){

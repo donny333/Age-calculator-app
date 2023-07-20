@@ -1,4 +1,4 @@
-import { daysInMonth, daysInMonthLeapYear, leapYears } from "../info.js";
+import { daysInMonth, daysInMonthLeapYear, leapYears } from "../helpers/info.js";
 
 function DaysLivedCalculator (inputDate, currentDate){
     const isCurrentYearLeap = leapYears.includes(currentDate.year);

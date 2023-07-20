@@ -1,4 +1,4 @@
-import ValidationErrorText from "./helpers/validationErrorText.js";
+import ValidationErrorText from "../helpers/validationErrorText.js";
 
 export default function monthValidation(inputDate){
     if(inputDate.month < 1 || inputDate.month > 12){

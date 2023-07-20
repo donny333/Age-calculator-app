@@ -31,9 +31,9 @@ function ageCalculatorHandler(event){
         const yearsLived = YearsLivedCalculator(inputDate, currentDate);
         const monthsLived = MonthsLivedCalculator(inputDate, currentDate);
         const daysLived = DaysLivedCalculator(inputDate, currentDate)        
-        // console.log(`Years lived: ${yearsLived}`)
-        // console.log(`Months lived: ${monthsLived}`)
-        // console.log(`Days lived: ${daysLived}`)
+        console.log(`Years lived: ${yearsLived}`)
+        console.log(`Months lived: ${monthsLived}`)
+        console.log(`Days lived: ${daysLived}`)
     }
 
 

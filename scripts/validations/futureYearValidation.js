@@ -1,4 +1,4 @@
-import ValidationErrorText from "./helpers/validationErrorText.js";
+import ValidationErrorText from "../helpers/validationErrorText.js";
 
 function futureYearValidation(inputDate, currentDate){
 if(inputDate.year > currentDate.year){
