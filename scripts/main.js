@@ -3,6 +3,8 @@ import MonthsLivedCalculator from "./calculators/MonthsLivedCalculator.js";
 import DaysLivedCalculator from "./calculators/DaysLivedCalculator.js";
 import requiredFieldValidation from "./validations/requiredFieldValidation.js";
 import futureYearValidation from "./validations/futureYearValidation.js";
+import validDateValidation from "./validations/validDateValidation.js";
+import monthValidation from "./validations/monthValidation.js";
 
 
 function ageCalculatorHandler(event){
@@ -20,7 +22,12 @@ function ageCalculatorHandler(event){
         day: dateNow.getDate()
     }
     
-    if(requiredFieldValidation(inputDate) && futureYearValidation(inputDate, currentDate)) {    
+    if(
+        requiredFieldValidation(inputDate) && 
+        validDateValidation(inputDate) &&
+        futureYearValidation(inputDate, currentDate) &&
+        monthValidation(inputDate)
+        ) {    
         const yearsLived = YearsLivedCalculator(inputDate, currentDate);
         const monthsLived = MonthsLivedCalculator(inputDate, currentDate);
         const daysLived = DaysLivedCalculator(inputDate, currentDate)        

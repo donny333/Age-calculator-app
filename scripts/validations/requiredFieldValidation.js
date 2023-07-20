@@ -1,19 +1,9 @@
-import ValidationErrorText from "./validationErrorText.js";
+import errorRemover from "./helpers/errorRemover.js";
+import ValidationErrorText from "./helpers/validationErrorText.js";
 
 function requiredFieldValidation(inputDate){
     if(!inputDate.year || !inputDate.month || !inputDate.day){
-        const paragraphsWithFontRed = document.querySelectorAll('.fontRed');
-        paragraphsWithFontRed.forEach(paragraph => {
-            paragraph.classList.remove('fontRed')
-        });
-        const paragraphsWithBorderRed = document.querySelectorAll('.borderRed');
-        paragraphsWithBorderRed.forEach(paragraph => {
-            paragraph.classList.remove('borderRed')
-        });
-        const paragraphs = document.querySelectorAll('.field > p');
-        paragraphs.forEach(paragraph => {
-            paragraph.remove()
-        });
+        errorRemover();
         if(!inputDate.year){
             const yearPar = new ValidationErrorText('This field is required')
             
@@ -61,18 +51,7 @@ function requiredFieldValidation(inputDate){
 
         } 
     } else {
-        const paragraphsWithFontRed = document.querySelectorAll('.fontRed');
-        paragraphsWithFontRed.forEach(paragraph => {
-            paragraph.classList.remove('fontRed')
-        });
-        const paragraphsWithBorderRed = document.querySelectorAll('.borderRed');
-        paragraphsWithBorderRed.forEach(paragraph => {
-            paragraph.classList.remove('borderRed')
-        });
-        const paragraphs = document.querySelectorAll('.field > p');
-        paragraphs.forEach(paragraph => {
-            paragraph.remove()
-        });
+        errorRemover();
         return true
     }
 
