@@ -12,4 +12,4 @@ export default function monthValidation(inputDate){
     } else {
         return true
     }
-}
+};

@@ -24,16 +24,16 @@ function ageCalculatorHandler(event){
     
     if(
         requiredFieldValidation(inputDate) && 
+        monthValidation(inputDate) &&
         validDateValidation(inputDate) &&
-        futureYearValidation(inputDate, currentDate) &&
-        monthValidation(inputDate)
+        futureYearValidation(inputDate, currentDate)
         ) {    
         const yearsLived = YearsLivedCalculator(inputDate, currentDate);
         const monthsLived = MonthsLivedCalculator(inputDate, currentDate);
         const daysLived = DaysLivedCalculator(inputDate, currentDate)        
-        console.log(`Years lived: ${yearsLived}`)
-        console.log(`Months lived: ${monthsLived}`)
-        console.log(`Days lived: ${daysLived}`)
+        // console.log(`Years lived: ${yearsLived}`)
+        // console.log(`Months lived: ${monthsLived}`)
+        // console.log(`Days lived: ${daysLived}`)
     }
 
 
